@@ -1,4 +1,4 @@
-# h5compare/logger.py
+# H5Compare/logger.py
 from queue import Queue
 
 def log_writer(queue: Queue, report_file: str):

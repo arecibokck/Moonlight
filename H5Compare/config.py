@@ -1,4 +1,4 @@
-# h5compare/config.py
+# H5Compare/config.py
 import os
 import sys
 

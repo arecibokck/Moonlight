@@ -1,4 +1,4 @@
-# h5compare/__init__.py
+# H5Compare/__init__.py
 """
 h5compare: HDF5 file comparison tool.
 """

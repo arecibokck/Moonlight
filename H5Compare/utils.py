@@ -1,4 +1,4 @@
-# h5compare/utils.py
+# H5Compare/utils.py
 import hashlib
 import os
 import subprocess

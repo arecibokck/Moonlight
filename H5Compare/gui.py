@@ -1,5 +1,5 @@
+# H5Compare/gui.py
 import sys, os
-from queue import Queue
 from PyQt5 import QtWidgets, QtCore, QtGui
 
 # Ensure parent folder is in sys.path so absolute imports work
@@ -203,12 +203,22 @@ class ComparisonThread(QtCore.QThread):
         self.finished_signal.emit()
 
 if __name__ == "__main__":
+    # Create the QApplication
     app = QtWidgets.QApplication(sys.argv)
+
+    # Build the path to the icon
     icon_path = os.path.join(os.path.dirname(__file__), "resources", "h5_icon.ico")
+    if not os.path.exists(icon_path):
+        print(f"Warning: Icon file not found at {icon_path}")
     icon = QtGui.QIcon(icon_path)
+
+    # Set application-level icon (affects taskbar, Alt+Tab)
     app.setWindowIcon(icon)
 
+    # Create main GUI window
     gui = HDF5ComparerGUI()
+    # Optional: also set window-level icon
     gui.setWindowIcon(icon)
     gui.show()
+
     sys.exit(app.exec_())

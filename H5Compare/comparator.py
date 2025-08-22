@@ -1,3 +1,4 @@
+# H5Compare/comparator.py
 import os
 from .utils import file_hash, run_h5diff, compare_h5
 from .config import USE_H5DIFF
