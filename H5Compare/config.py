@@ -17,3 +17,4 @@ ATOL = 1e-12
 REPORT_FILE = "comparison_report.txt"
 HASH_ALGO = "md5"
 NUM_WORKERS = os.cpu_count() or 4
+SIZE_TOL_MB = 5  # allowed difference in total size (MB)
